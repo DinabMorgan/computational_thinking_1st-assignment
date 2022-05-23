@@ -193,8 +193,9 @@
             Console.WriteLine("RESTAURANT BILL\n");
 
             // Enter your solution here
+           
             int sum = 13 * 4;
-            Console.WriteLine(" Mike and his friends need to pay $ "+ sum);
+            Console.WriteLine(" Mike and his friends need to pay $ " + sum);
 
             Console.WriteLine("Number of diners?");
             string diners = Console.ReadLine();
@@ -202,26 +203,29 @@
 
             Console.WriteLine("How much is each diner paying?");
             string payment = Console.ReadLine();
-            int num2 = Int32.Parse(payment);
+            float num2 = Int32.Parse(payment);
 
-            int sum2 = num * num2;
+            float sum2 = num * num2;
             Console.WriteLine("Total cost of bill $" + sum2);
 
 
             if (sum2 >= 50)
             {
                 Console.WriteLine("Congratulations! You get 10% off your total bill!");
-                int num3 = sum2 * 10 / 100;
-                int billWithDiscount = sum2 - num3;
+                float num3 = sum2 * 10 / 100;
+
+                float billWithDiscount = sum2 - num3;
                 Console.WriteLine("$ " + billWithDiscount + " is your new bill total.");
-                    
+
 
             }
             else
             {
-                Console.WriteLine("please pay, $ " + sum2);
+                Console.WriteLine("Congratulations! You get 5% off your total bill!");
+                float newTotal = sum2 * 5 / 100;
+                float lessTotal = sum2 - newTotal;
+                Console.WriteLine("Please pay, $ " + lessTotal);
             }
-
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -265,19 +269,19 @@
             }
             else if (age >= 5 && age <= 11)
             {
-                Console.WriteLine("Elementary school");
+                Console.WriteLine("You are in Elementary school");
             }
             else if (age >= 12 && age <= 14)
             {
-                Console.WriteLine("Middle School");
+                Console.WriteLine("You are in Middle School");
             }
             else if (age >= 15 && age <= 18)
             {
-                Console.WriteLine("High School");
+                Console.WriteLine("You are in High School");
             }
             else if (age >= 19 && age <= 22)
             {
-                Console.WriteLine("College");
+                Console.WriteLine("You are in College");
             }
             else if (age >= 23 && age <= 65)
             {
@@ -369,11 +373,11 @@
 
             // Enter your solution here
 
-            Console.WriteLine("Please enter a name.");
+            Console.WriteLine("Please enter a first name.");
             string nameOne = Console.ReadLine();
             int nameOneLength = nameOne.Length;
 
-            Console.WriteLine("Please enter another name.");
+            Console.WriteLine("Please enter last name.");
             string nameTwo = Console.ReadLine();
             int nameTwoLength = nameTwo.Length;
 
