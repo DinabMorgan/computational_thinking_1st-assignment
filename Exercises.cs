@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace template_csharp_computational_thinking
+﻿namespace template_csharp_computational_thinking
 {
     internal class Exercises
     {
@@ -19,6 +13,24 @@ namespace template_csharp_computational_thinking
             Console.WriteLine("ARE THESE INTEGERS EQUAL?\n");
 
             // Enter your solution here
+            Console.WriteLine("Please enter a number.");
+            string input = Console.ReadLine();
+            int num = Int32.Parse(input);
+
+            Console.WriteLine("Please enter another number.");
+            string input1 = Console.ReadLine();
+            int num1 = Int32.Parse(input1);
+
+
+            if (num != num1)
+            {
+                Console.WriteLine("These numbers are not equal.");
+            }
+            else
+            {
+                Console.WriteLine("Great job, the numbers are equal!");
+            }
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -34,6 +46,22 @@ namespace template_csharp_computational_thinking
 
             // Enter your solution here
 
+            Console.WriteLine("Please enter a number.");
+            string even = Console.ReadLine();
+            int notOdd = Int32.Parse(even);
+
+            if (notOdd % 2 == 0)
+            {
+                Console.WriteLine("Your number is even.");
+            }
+            else
+            {
+                Console.WriteLine("Your number is odd.");
+            }
+
+            Console.WriteLine("Thank you for playing!");
+
+
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -48,6 +76,33 @@ namespace template_csharp_computational_thinking
 
             // Enter your solution here
 
+            Console.WriteLine("Please enter a letter.");
+            string letterResponse = Console.ReadLine();
+
+            switch (letterResponse)
+            {
+                case "A":
+                case "a":
+                case "E":
+                case "e":
+                case "I":
+                case "i":
+                case "O":
+                case "o":
+                case "U":
+                case "u":
+                    Console.WriteLine("You wrote a vowel!");
+                    break;
+                case "Y":
+                case "y":
+                    Console.WriteLine("Some consider this a vowel, while others do not.");
+                    break;
+                default:
+                    Console.WriteLine("You wrote a consonant!");
+                    break;
+            }
+
+
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -61,6 +116,31 @@ namespace template_csharp_computational_thinking
             Console.WriteLine("FIND THE LARGEST NUMBER\n");
 
             // Enter your solution here
+            Console.WriteLine("Please enter a number.");
+            string firstNumber = Console.ReadLine();
+            int numberFirst = Int32.Parse(firstNumber);
+
+            Console.WriteLine("Please enter another number.");
+            string secondNumber = Console.ReadLine();
+            int numberSecond = Int32.Parse(secondNumber);
+
+            Console.WriteLine("Please enter a third number.");
+            string thirdNumber = Console.ReadLine();
+            int numberThird = Int32.Parse(thirdNumber);
+
+            if (numberFirst >= numberSecond && numberFirst >= numberThird)
+            {
+                Console.WriteLine("The biggest number is: " + numberFirst);
+            }
+            else if (numberSecond >= numberThird && numberSecond >= numberFirst)
+            {
+                Console.WriteLine("The biggest number is: " + numberSecond);
+            }
+            else if (numberThird >= numberFirst && numberThird >= numberSecond)
+            {
+                Console.WriteLine("The biggest number is: " + numberThird);
+            }
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -74,6 +154,23 @@ namespace template_csharp_computational_thinking
             Console.WriteLine("DIVISIBLE BY 3\n");
 
             // Enter your solution here
+
+
+            Console.WriteLine("Please enter a number!");
+            string dNumber = Console.ReadLine();
+            int three = Int32.Parse(dNumber);
+
+            if (three % 3 == 0)
+            {
+                Console.WriteLine("Your number is divisible by 3!");
+
+            }
+            else
+            {
+                Console.WriteLine("Your number is not divisible by 3!");
+            }
+
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -96,6 +193,35 @@ namespace template_csharp_computational_thinking
             Console.WriteLine("RESTAURANT BILL\n");
 
             // Enter your solution here
+            int sum = 13 * 4;
+            Console.WriteLine(" Mike and his friends need to pay $ "+ sum);
+
+            Console.WriteLine("Number of diners?");
+            string diners = Console.ReadLine();
+            int num = Int32.Parse(diners);
+
+            Console.WriteLine("How much is each diner paying?");
+            string payment = Console.ReadLine();
+            int num2 = Int32.Parse(payment);
+
+            int sum2 = num * num2;
+            Console.WriteLine("Total cost of bill $" + sum2);
+
+
+            if (sum2 >= 50)
+            {
+                Console.WriteLine("Congratulations! You get 10% off your total bill!");
+                int num3 = sum2 * 10 / 100;
+                int billWithDiscount = sum2 - num3;
+                Console.WriteLine("$ " + billWithDiscount + " is your new bill total.");
+                    
+
+            }
+            else
+            {
+                Console.WriteLine("please pay, $ " + sum2);
+            }
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -123,6 +249,49 @@ namespace template_csharp_computational_thinking
 
             // Enter your solution here
 
+
+
+            Console.WriteLine("Please enter your age.");
+            string response = Console.ReadLine();
+            int age = Int32.Parse(response);
+
+            if (age >= 0 && age <= 2)
+            {
+                Console.WriteLine("Still in Mama's arms");
+            }
+            else if (age == 3 || age == 4)
+            {
+                Console.WriteLine("Preschool Maniac");
+            }
+            else if (age >= 5 && age <= 11)
+            {
+                Console.WriteLine("Elementary school");
+            }
+            else if (age >= 12 && age <= 14)
+            {
+                Console.WriteLine("Middle School");
+            }
+            else if (age >= 15 && age <= 18)
+            {
+                Console.WriteLine("High School");
+            }
+            else if (age >= 19 && age <= 22)
+            {
+                Console.WriteLine("College");
+            }
+            else if (age >= 23 && age <= 65)
+            {
+                Console.WriteLine("Working for the man (or woman)");
+            }
+            else if (age >= 66 && age <= 100)
+            {
+                Console.WriteLine("The Golden Years (like the David Bowie song!");
+            }
+            else if (age <= -1 || age >= 101)
+            {
+                Console.WriteLine("This program is for humans!");
+            }
+
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -137,6 +306,50 @@ namespace template_csharp_computational_thinking
             Console.WriteLine("WORDS TO DIGITS\n");
 
             // Enter your solution here
+            // Having a string representation of a number, you need to print the digit form of the number.
+            // Ask the user to enter a string representation of a number from zero to ten.
+            // Using switch case, print the digit (0-10) representation of the number.
+
+
+            Console.WriteLine(" Please write out a number 1-10");
+            string nResponse = Console.ReadLine();
+
+            switch (nResponse)
+            {
+                case "one":
+                    Console.WriteLine("You entered the number 1");
+                    break;
+                case "two":
+                    Console.WriteLine("You entered the number 2");
+                    break;
+                case "three":
+                    Console.WriteLine("You entered the number 3");
+                    break;
+                case "four":
+                    Console.WriteLine("You entered the number 4");
+                    break;
+                case "five":
+                    Console.WriteLine("You entered the number 5");
+                    break;
+                case "six":
+                    Console.WriteLine("You entered the number 6");
+                    break;
+                case "seven":
+                    Console.WriteLine("You entered the number 7");
+                    break;
+                case "eight":
+                    Console.WriteLine("You entered the number 8");
+                    break;
+                case "nine":
+                    Console.WriteLine("You entered the number 9");
+                    break;
+                case "ten":
+                    Console.WriteLine("You entered the number 10");
+                    break;
+                default:
+                    Console.WriteLine("You didn't write out a number! Oh no!!");
+                    break;
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -156,6 +369,29 @@ namespace template_csharp_computational_thinking
 
             // Enter your solution here
 
+            Console.WriteLine("Please enter a name.");
+            string nameOne = Console.ReadLine();
+            int nameOneLength = nameOne.Length;
+
+            Console.WriteLine("Please enter another name.");
+            string nameTwo = Console.ReadLine();
+            int nameTwoLength = nameTwo.Length;
+
+
+            if (nameOneLength == nameTwoLength)
+            {
+
+                Console.WriteLine("Both names are the same length.");
+            }
+            else if (nameOneLength >= nameTwoLength)
+            {
+
+                Console.WriteLine(nameOne + " is the longer name.");
+            }
+            else
+            {
+                Console.WriteLine(nameTwo + " is the longer name.");
+            }
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -167,13 +403,30 @@ namespace template_csharp_computational_thinking
             // If the two names are the same, print "The names are the same."
             // If they're not the same, print "The names are different."
 
+
+
+
             Console.Clear();
             Console.WriteLine("ARE THESE NAMES THE SAME?\n");
 
             // Enter your solution here
+            Console.WriteLine("Please enter a name.");
+            string name1 = Console.ReadLine();
+            Console.WriteLine("Please enter a name.");
+            string name2 = Console.ReadLine();
 
-            Console.Write("Press enter to return to the Main Menu");
-            Console.ReadLine();
+            if (name1 == name2)
+            {
+                Console.WriteLine("The names are the same!");
+            }
+            else
+            {
+                Console.WriteLine("The names are different.");
+            }
+            {
+                Console.Write("Press enter to return to the Main Menu");
+                Console.ReadLine();
+            }
         }
 
         public static void NameAndBirthplace()
@@ -185,9 +438,18 @@ namespace template_csharp_computational_thinking
             Console.WriteLine("NAME AND PLACE OF BIRTH\n");
 
             // Enter your solution here
+            
+
+                Console.WriteLine("What is your first name?");
+                string firstName = Console.ReadLine();
+                Console.WriteLine("Hello " + firstName + "!  Where were you born? ");
+                string place = Console.ReadLine();
+                Console.WriteLine("Hey " + firstName + "! You were born in " + place + ".");
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
+
         }
+    
     }
 }
